@@ -1,9 +1,6 @@
-name: Pipeline 
+name: Branch 
 
 on:
-  push:
-    branches: 
-      - master
   pull_request:
     branches:
       - master
@@ -27,13 +24,3 @@ jobs:
     - name: Run Rubocop
       run: bundle exec rubocop
       
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [static-analysis]
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "tech-dojo-ruby-bridge" 
-          heroku_email: "vitor.pacheco@talkdesk.com"
