@@ -1,4 +1,4 @@
-# Ruby Workshop - Tech Dojo 2020
+# Ruby Workshop - Tech Dojo 2021
 
 The goal of this workshop is to build a small micro-service based application that receives events and executes actions in external systems. Each event and corresponding action constitutes an **automation**. Thus, we're building an automation execution service. 
 
