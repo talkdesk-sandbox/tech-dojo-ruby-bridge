@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CreateTicketConverter
-  def initialize(options: {})
+  def initialize(options = {})
     @input = options.fetch(:input, {})
     # Example input:
     # {
