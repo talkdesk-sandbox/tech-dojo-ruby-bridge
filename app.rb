@@ -29,3 +29,7 @@ put '/tickets/:ticket_id' do
   converted_data = CreateTicketConverter.new({ input: data }).convert
   ExternalApiGateway.new.update JSON.dump(converted_data)
 end
+
+delete '/tickets/:ticket_id' do
+  ExternalApiGateway.new.delete
+end
