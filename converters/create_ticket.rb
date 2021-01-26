@@ -16,12 +16,12 @@ class CreateTicketConverter
   def convert
     # Example output:
     {
-      "subject": @input["title"],
-      "content": @input["description"],
-      "status": @input["status"],
+      "subject": @input['title'],
+      "content": @input['description'],
+      "status": @input['status'],
       "customer": {
-        "name": @input["name"],
-        "phone": @input["phone_number"]
+        "name": @input['name'],
+        "phone": @input['phone_number']
       }
     }
   end

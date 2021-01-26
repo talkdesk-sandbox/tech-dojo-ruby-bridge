@@ -20,8 +20,6 @@ end
 
 post '/tickets' do
   data = JSON.parse request.body.read
-  puts data
-  convertedData = CreateTicketConverter.new(options = {:input => data}).convert 
-  puts convertedData
-  ExternalApiGateway.new.create JSON.dump(convertedData)
+  converted_data = CreateTicketConverter.new({ input: data }).convert
+  ExternalApiGateway.new.create JSON.dump(converted_data)
 end
