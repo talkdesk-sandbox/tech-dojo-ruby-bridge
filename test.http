@@ -9,3 +9,14 @@ content-type: application/json
     "name": "Peter John",
     "phone_number": "+351111111111"
 }
+
+
+PUT http://localhost:4567/tickets/1 HTTP/1.1
+content-type: application/json
+{
+    "title": "This is a title",
+    "description": "description",
+    "status": "closed",
+    "name": "Peter John",
+    "phone_number": "+351111111111"
+}
