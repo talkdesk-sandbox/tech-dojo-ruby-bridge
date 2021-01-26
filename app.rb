@@ -23,3 +23,9 @@ post '/tickets' do
   converted_data = CreateTicketConverter.new({ input: data }).convert
   ExternalApiGateway.new.create JSON.dump(converted_data)
 end
+
+put '/tickets/:ticket_id' do
+  data = JSON.parse request.body.read
+  converted_data = CreateTicketConverter.new({ input: data }).convert
+  ExternalApiGateway.new.update JSON.dump(converted_data)
+end
