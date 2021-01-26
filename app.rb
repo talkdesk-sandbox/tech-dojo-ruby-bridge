@@ -19,6 +19,9 @@ get '/' do
 end
 
 post '/tickets' do
-  CreateTicketConverter.new.convert
-  ExternalApiGateway.new.create 'this is my data'
+  data = JSON.parse request.body.read
+  puts data
+  convertedData = CreateTicketConverter.new(options = {:input => data}).convert 
+  puts convertedData
+  ExternalApiGateway.new.create JSON.dump(convertedData)
 end

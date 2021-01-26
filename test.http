@@ -1,0 +1,11 @@
+POST http://localhost:4567/tickets HTTP/1.1
+content-type: application/json
+
+
+{
+    "title": "This is a title",
+    "description": "description",
+    "status": "open",
+    "name": "Peter John",
+    "phone_number": "+351111111111"
+}

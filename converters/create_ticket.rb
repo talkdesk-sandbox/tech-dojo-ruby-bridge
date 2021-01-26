@@ -15,16 +15,14 @@ class CreateTicketConverter
 
   def convert
     # Example output:
-    # {
-    #   "subject": "This is a title",
-    #   "content": "description",
-    #   "status": "open",
-    #   "customer": {
-    #     "name": "Peter John",
-    #     "phone": "+35111111111"
-    #   }
-    # }
-
-    nil
+    {
+      "subject": @input["title"],
+      "content": @input["description"],
+      "status": @input["status"],
+      "customer": {
+        "name": @input["name"],
+        "phone": @input["phone_number"]
+      }
+    }
   end
 end
