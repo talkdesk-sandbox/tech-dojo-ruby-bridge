@@ -3,7 +3,7 @@
 require 'rest-client'
 
 class ExternalApiGateway
-  CREATE_ENDPOINT = 'https://run.mocky.io/v3/0ec25a7a-3eba-4249-9eae-e32cba5923a7'
+  CREATE_ENDPOINT = 'https://run.mocky.io/v3/727fd888-f609-4896-82d5-8d051e38036f'
 
   def create(data)
     RestClient.post(
